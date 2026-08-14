@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Get a Quote - Thuli's Hair Studio</title>
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header>
+        <h1>Thuli's Hair Studio</h1>
+
+        <!-- Main navigation -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main enquiry section -->
+    <main>
+
+        <h2>Get a Quote</h2>
+
+        <p>
+            Complete the form below to enquire about a hairstyle or
+            request a quote from Thuli's Hair Studio.
+        </p>
+
+        <!-- Customer enquiry form -->
+        <form>
+
+            <!-- Customer name -->
+            <label for="name">Full Name:</label>
+            <br>
+            <input type="text" id="name" name="name" required>
+
+            <br><br>
+
+            <!-- Phone number -->
+            <label for="phone">Phone Number:</label>
+            <br>
+            <input type="tel" id="phone" name="phone" required>
+
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email Address:</label>
+            <br>
+            <input type="email" id="email" name="email">
+
+            <br><br>
+
+            <!-- Service selection -->
+            <label for="service">Choose a Hairstyle:</label>
+            <br>
+
+            <select id="service" name="service" required>
+                <option value="">-- Select a service --</option>
+                <option value="freehand">Freehand - R100</option>
+                <option value="short-knotless">Short Knotless - R200</option>
+                <option value="long-knotless">Long Knotless - R250</option>
+                <option value="cornrows">Cornrows</option>
+            </select>
+
+            <br><br>
+
+            <!-- Preferred date -->
+            <label for="date">Preferred Appointment Date:</label>
+            <br>
+            <input type="date" id="date" name="date" required>
+
+            <br><br>
+
+            <!-- Preferred time -->
+            <label for="time">Preferred Time:</label>
+            <br>
+            <input type="time" id="time" name="time">
+
+            <br><br>
+
+            <!-- Additional message -->
+            <label for="message">Additional Information:</label>
+            <br>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                cols="30"
+                placeholder="Tell us anything else we should know">
+            </textarea>
+
+            <br><br>
+
+            <!-- Submit button -->
+            <button type="submit">Request a Quote</button>
+
+        </form>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Thuli's Hair Studio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
