@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="style.css">
     <title>Get a Quote - Thuli's Hair Studio</title>
 </head>
 
 <body>
 
     <header>
+
+        <img src="images/logo.jpg.jpeg"
+             alt="Thuli's Hair Studio Logo"
+             class="logo">
+
         <h1>Thuli's Hair Studio</h1>
 
-        <!-- Main navigation -->
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="enquiry.html">Enquiry</a>
-            <a href="contact.html">Contact</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+
     </header>
 
     <main>
@@ -32,66 +39,86 @@
             request a quote from Thuli's Hair Studio.
         </p>
 
-        <form>
+        <form action="#" method="post" class="enquiry-form">
 
-            <!-- Customer name -->
-            <label for="name">Full Name:</label>
-            <br>
-            <input type="text" id="name" name="name" required>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your full name"
+                       required>
+            </div>
 
-            <br><br>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email address"
+                       required>
+            </div>
 
-            <label for="phone">Phone Number:</label>
-            <br>
-            <input type="tel" id="phone" name="phone" required>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       placeholder="Enter your phone number"
+                       required>
+            </div>
 
-            <br><br>
+            <div class="form-group">
+                <label for="service">Select Service</label>
 
-            <label for="email">Email Address:</label>
-            <br>
-            <input type="email" id="email" name="email">
+                <select id="service" name="service" required>
+                    <option value="">-- Choose a service --</option>
+                    <option value="braids">Braids</option>
+                    <option value="weaves">Weaves</option>
+                    <option value="wigs">Wigs</option>
+                    <option value="hair-treatment">Hair Treatment</option>
+                    <option value="styling">Hair Styling</option>
+                </select>
+            </div>
 
-            <br><br>
+            <div class="form-group">
+                <label for="date">Preferred Date</label>
 
-            <label for="service">Choose a Hairstyle:</label>
-            <br>
+                <input type="date"
+                       id="date"
+                       name="date"
+                       required>
+            </div>
 
-            <select id="service" name="service" required>
-                <option value="">-- Select a service --</option>
-                <option value="freehand">Freehand - R100</option>
-                <option value="short-knotless">Short Knotless - R200</option>
-                <option value="long-knotless">Long Knotless - R250</option>
-                <option value="cornrows">Cornrows</option>
-            </select>
+            <div class="form-group">
+                <label for="time">Preferred Time</label>
 
-            <br><br>
+                <input type="time"
+                       id="time"
+                       name="time"
+                       required>
+            </div>
 
-            <label for="date">Preferred Appointment Date:</label>
-            <br>
-            <input type="date" id="date" name="date" required>
+            <div class="form-group">
+                <label for="message">Additional Information</label>
 
-            <br><br>
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          placeholder="Tell us anything we should know about your appointment..."></textarea>
+            </div>
 
-            <label for="time">Preferred Time:</label>
-            <br>
-            <input type="time" id="time" name="time">
+            <div class="form-buttons">
 
-            <br><br>
+                <button type="submit">
+                    Send Enquiry
+                </button>
 
-            <label for="message">Additional Information:</label>
-            <br>
+                <button type="reset">
+                    Clear Form
+                </button>
 
-            <textarea
-                id="message"
-                name="message"
-                rows="5"
-                cols="30"
-                placeholder="Tell us anything else we should know">
-            </textarea>
-
-            <br><br>
-
-            <button type="submit">Request a Quote</button>
+            </div>
 
         </form>
 
@@ -102,4 +129,5 @@
     </footer>
 
 </body>
+
 </html>
