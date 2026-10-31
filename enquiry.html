@@ -4,8 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Thuli's Hair Studio offers beautiful braiding, knotless hairstyles, wig styling and hair treatments at affordable prices.">
+    <meta name="keywords" content="Thuli's Hair Studio, braiding, knotless braids, hairstyles, KwaMhlanga">
+    <meta name="author" content="Thuli's Hair Studio">
+
     <link rel="stylesheet" href="style.css">
-    <title>Get a Quote - Thuli's Hair Studio</title>
+
+    <title>Thuli's Hair Studio | Braiding and Hair Styling</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -39,7 +47,8 @@
             request a quote from Thuli's Hair Studio.
         </p>
 
-        <form action="#" method="post" class="enquiry-form">
+        
+        <form id="enquiryForm" class="enquiry-form" novalidate>
 
             <div class="form-group">
                 <label for="name">Full Name</label>
@@ -110,17 +119,13 @@
 
             <div class="form-buttons">
 
-                <button type="submit">
-                    Send Enquiry
-                </button>
-
-                <button type="reset">
-                    Clear Form
-                </button>
+               <button type="submit">Send Enquiry</button>
+<button type="reset">Clear Form</button>
 
             </div>
+           <p id="formMessage" aria-live="polite"></p>
 
-        </form>
+</form>
 
     </main>
 

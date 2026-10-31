@@ -41,3 +41,31 @@ https://www.w3.org/WAI/tutorials/forms/
 * Added media queries for tablet and mobile screen sizes.
 * Tested the website at desktop, tablet and mobile screen sizes.
 
+## Part 3 – Enhancing Functionality and SEO
+
+### Changes Made
+
+1. Added JavaScript functionality to improve website interaction.
+2. Added a search feature to filter hairstyles on the Services page.
+3. Added enquiry form validation.
+4. Added date validation to prevent users from selecting past dates.
+5. Added navigation highlighting to identify the current page.
+6. Added SEO meta descriptions, keywords and author information to HTML pages.
+7. Improved page titles to describe the content of each page.
+8. Created a `robots.txt` file to guide search engine crawlers.
+9. Created a `sitemap.xml` file to list the website pages.
+
+### Files Added or Updated
+
+- `script.js`
+- `robots.txt`
+- `sitemap.xml`
+- `index.html`
+- `about.html`
+- `services.html`
+- `enquiry.html`
+- `contact.html`
+
+### Testing
+
+The service search feature was tested by searching for hairstyles. Enquiry form validation was also tested using empty and invalid form details. Further testing and corrections are still required.

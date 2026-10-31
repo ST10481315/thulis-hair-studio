@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://st10481315.github.io/thulis-hair-studio/sitemap.xml

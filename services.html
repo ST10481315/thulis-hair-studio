@@ -4,12 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Thuli's Hair Studio offers beautiful braiding, knotless hairstyles, wig styling and hair treatments at affordable prices.">
+    <meta name="keywords" content="Thuli's Hair Studio, braiding, knotless braids, hairstyles, KwaMhlanga">
+    <meta name="author" content="Thuli's Hair Studio">
+
     <link rel="stylesheet" href="style.css">
-    <title>Services | Thuli's Hair Studio</title>
+
+    <title>Thuli's Hair Studio | Braiding and Hair Styling</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-
+ 
     <header>
 
         <img src="images/logo.jpg.jpeg"
@@ -32,6 +40,11 @@
 
     <main>
 
+<div class="service-search">
+    <label for="serviceSearch">Search for a service:</label>
+    <input type="text" id="serviceSearch" placeholder="Search hairstyles...">
+    <p id="searchMessage" aria-live="polite"></p>
+</div>
        
         <section class="services-heading">
 
