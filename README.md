@@ -69,3 +69,20 @@ https://www.w3.org/WAI/tutorials/forms/
 ### Testing
 
 The service search feature was tested by searching for hairstyles. Enquiry form validation was also tested using empty and invalid form details. Further testing and corrections are still required.
+
+## SEO Discussion
+
+### 1. What is SEO and its purpose?
+SEO (Search Engine Optimisation) is the process of improving a website so that search engines can find and understand it. Its purpose is to improve the website's visibility and help users find relevant information through search results.
+
+### 2. How does SEO improve UX and website performance?
+SEO improves user experience by making websites easier to navigate, mobile-friendly and accessible. Optimised images, organised content and responsive CSS also help improve loading speed and usability.
+
+### 3. Benefits of implementing SEO
+SEO helps a website attract more visitors, improve its visibility and reach its target audience. It also makes information easier to find and improves the overall credibility of a website.
+
+### 4. SEO techniques using HTML, CSS and JavaScript
+In Thuli's Hair Studio, descriptive page titles, headings, image alt text and meta descriptions help search engines understand the content. Responsive CSS improves mobile usability, while JavaScript adds interactive features such as the service search. The sitemap.xml and robots.txt files also support search engine crawling.
+
+### 5. Purpose and examples of HTML meta elements
+Meta elements provide information about a webpage to browsers and search engines. For example, `<meta name="description" content="Braiding and hair styling services at Thuli's Hair Studio.">` describes the page, while `<meta name="viewport" content="width=device-width, initial-scale=1.0">` helps the website display correctly on mobile devices.
