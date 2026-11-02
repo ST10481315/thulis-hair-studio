@@ -54,6 +54,7 @@ https://www.w3.org/WAI/tutorials/forms/
 7. Improved page titles to describe the content of each page.
 8. Created a `robots.txt` file to guide search engine crawlers.
 9. Created a `sitemap.xml` file to list the website pages.
+10. Implemented AJAX using the JavaScript fetch() method to retrieve and display data from an external API.
 
 ### Files Added or Updated
 
@@ -68,8 +69,13 @@ https://www.w3.org/WAI/tutorials/forms/
 
 ### Testing
 
-The service search feature was tested by searching for hairstyles. Enquiry form validation was also tested using empty and invalid form details. Further testing and corrections are still required.
-
+- Tested the service search feature by searching for hairstyles.
+- Tested enquiry form validation using empty and invalid details.
+- Tested date validation to prevent past dates.
+- Tested AJAX functionality to retrieve and display external data.
+- Tested the website using Chrome's mobile device simulation.
+- Tested the deployed website to confirm that its pages and functionality work correctly.
+  
 ## SEO Discussion
 
 ### 1. What is SEO and its purpose?
@@ -85,4 +91,12 @@ SEO helps a website attract more visitors, improve its visibility and reach its 
 In Thuli's Hair Studio, descriptive page titles, headings, image alt text and meta descriptions help search engines understand the content. Responsive CSS improves mobile usability, while JavaScript adds interactive features such as the service search. The sitemap.xml and robots.txt files also support search engine crawling.
 
 ### 5. Purpose and examples of HTML meta elements
-Meta elements provide information about a webpage to browsers and search engines. For example, `<meta name="description" content="Braiding and hair styling services at Thuli's Hair Studio.">` describes the page, while `<meta name="viewport" content="width=device-width, initial-scale=1.0">` helps the website display correctly on mobile devices.
+Meta elements provide information about a webpage to browsers and search engines. For example, `<meta
+name="description" content="Braiding and hair styling services at Thuli's Hair Studio.">` describes the page, while `<meta name="viewport" content="width=device-width, initial-scale=1.0">` helps the website display correctly on mobile devices.
+## Website Deployment
+
+The website was deployed using GitHub Pages.
+
+Live Website: https://st10481315.github.io/thulis-hair-studio/
+
+GitHub Repository: https://github.com/ST10481315/thulis-hair-studio
