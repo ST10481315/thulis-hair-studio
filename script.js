@@ -1,7 +1,7 @@
 
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Highlight the current page
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
     document.querySelectorAll("header nav a").forEach(function (link) {
@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Prevent selecting a past date
     const dateInput = document.getElementById("date");
 
     if (dateInput) {
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
         dateInput.min = localToday;
     }
 
-    // Search and filter services
     const serviceSearch = document.getElementById("serviceSearch");
 
     if (serviceSearch) {
@@ -37,9 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const matches = card.textContent.toLowerCase().includes(term);
                 card.hidden = !matches;
 
-                if (matches) {
-                    visibleCount++;
-                }
+                if (matches) visibleCount++;
             });
 
             if (searchMessage) {
@@ -50,22 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Enquiry form validation
     const enquiryForm = document.getElementById("enquiryForm");
-    console.log("Enquiry form found:", enquiryForm);
 
     if (enquiryForm) {
         const message = document.getElementById("formMessage");
         const phoneInput = document.getElementById("phone");
 
         enquiryForm.addEventListener("submit", function (event) {
-            console.log("Submit button clicked!");
             event.preventDefault();
 
             if (!enquiryForm.checkValidity()) {
                 enquiryForm.reportValidity();
-                message.textContent =
-                    "Please complete all required fields correctly.";
+
+                if (message) {
+                    message.textContent =
+                        "Please complete all required fields correctly.";
+                }
                 return;
             }
 
@@ -81,37 +77,64 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            message.textContent =
-                "Your details passed validation. Your enquiry has not been sent because a booking service is not connected yet.";
+            if (message) {
+                message.textContent =
+                    "Thank you for choosing Thuli's Hair Studio! " +
+                    "We appreciate your interest in our services. " +
+                    "Your details have been checked successfully. " +
+                    "We look forward to making you look and feel beautiful. " +
+                    "For appointment confirmation, please contact us directly. " +
+                    "With love, Thuli's Hair Studio.";
+            }
         });
 
         enquiryForm.addEventListener("reset", function () {
-            message.textContent = "";
+            if (message) {
+                message.textContent = "";
+            }
         });
     }
-// AJAX demonstration
-const ajaxButton = document.getElementById("ajaxButton");
-const ajaxMessage = document.getElementById("ajaxMessage");
 
-if (ajaxButton && ajaxMessage) {
-    ajaxButton.addEventListener("click", function () {
-        ajaxMessage.textContent = "Loading...";
+    const ajaxButton = document.getElementById("ajaxButton");
+    const ajaxMessage = document.getElementById("ajaxMessage");
 
-        fetch("https://jsonplaceholder.typicode.com/posts/1")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Request failed");
-                }
-                return response.json();
-            })
-            .then(data => {
-                ajaxMessage.textContent =
-                    "AJAX successful! Data received: " + data.title;
-            })
-            .catch(error => {
-                ajaxMessage.textContent =
-                    "Unable to load information. Please try again.";
-            });
-    });
-}
+    if (ajaxButton && ajaxMessage) {
+        ajaxButton.addEventListener("click", function () {
+
+            ajaxMessage.textContent = "Loading salon information...";
+
+            fetch("services.json")
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error("Could not load services.json");
+                    }
+
+                    return response.json();
+                })
+                .then(function (data) {
+
+                    ajaxMessage.innerHTML = `
+                        <h3>${data.title}</h3>
+                        <p>${data.description}</p>
+                        <h4>Our Services:</h4>
+                        <ul>
+                            ${data.services.map(function (service) {
+                                return `<li>${service}</li>`;
+                            }).join("")}
+                        </ul>
+                        <p>${data.message}</p>
+                        <p>Thank you for visiting Thuli's Hair Studio!
+                        We look forward to making you look and feel beautiful.</p>
+                    `;
+
+                })
+                .catch(function (error) {
+                    console.error("AJAX Error:", error);
+
+                    ajaxMessage.textContent =
+                        "Sorry, we could not load the salon information. Please try again.";
+                });
+        });
+    }
+
 });
